@@ -7,14 +7,46 @@
     <title>Open Music</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./src/styles/globalStyles.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
 
     <!-- SCRIPTS  -->
+    <script src="./src/scripts/productsData.js" defer></script>
+    <script src="./src/scripts/theme.js" defer></script>
+    <script type="module" src="./src/scripts/index.js" defer></script>
+
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header class="header__container">
+      <h1 class="header__title">open music</h1>
+      <button class="header__button">dark mode</button>
+    </header>
+
+    <main class="main__container">
+
+      <section class="filter__management">
+
+        <div class="filter__container">
+          <h2 class="filter__title">Gênero Musical</h2>
+          <ul class="filter__list"></ul>
+        </div>
+
+        <div class="input__container">
+          <div class="input__box">
+            <h2 class="input__price">Definir Preço</h2>
+            <p class="input__range">Até R$...</p>
+          </div>
+          <input type="range" min="1" max="100" value="30" class="slider" id="myRange">
+        </div>
+      </section>
+
+      <section class="cards__management">
+        <h2 class="cards__title">Álbuns Encontrados</h2>
+        <ul class="cards__container"></ul>
+      </section>
+    </main>
+
+
   </body>
 </html>
